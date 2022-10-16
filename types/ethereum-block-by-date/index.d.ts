@@ -28,7 +28,7 @@ declare class EthDater {
      * @param after Block after, optional. Search for the nearest block before or after the given date. By default, true.
      * @param refresh Refresh boundaries, optional. Recheck the latest block before request. By default, false.
      */
-    getDate(date: MomentInput, after?: boolean, refresh?: boolean): EthDater.BlockResult;
+    getDate(date: MomentInput, after?: boolean, refresh?: boolean): Promise<EthDater.BlockResult>;
 
     /**
      * Returns an array of blocks corresponding to periods.
@@ -47,5 +47,5 @@ declare class EthDater {
         every?: number,
         after?: boolean,
         refresh?: boolean,
-    ): EthDater.BlockResult[];
+    ): Promise<EthDater.BlockResult[]>;
 }
